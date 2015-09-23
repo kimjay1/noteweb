@@ -9,6 +9,4 @@ class Note extends Eloquent{
 		}
 
 
-
-
 }
