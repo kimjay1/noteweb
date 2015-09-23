@@ -17,6 +17,4 @@ Route::get('/', function()
 	return View::make('hello');
 });
 
-Route::resource('notes' , 'NoteController');
-
-Routes::resource('category', 'CategoryController');
+Route::resource('category', 'CategoryController');

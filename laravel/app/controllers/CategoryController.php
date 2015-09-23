@@ -9,7 +9,13 @@ class CategoryController extends \BaseController {
 	 */
 	public function index()
 	{
-		//
+		
+		// $category = Category::all();
+
+		//return View::make('category.index')->with('category' , $category);
+
+		echo 'bati';
+
 	}
 
 
@@ -20,7 +26,7 @@ class CategoryController extends \BaseController {
 	 */
 	public function create()
 	{
-		//
+		return View::make('category.add');
 	}
 
 
@@ -31,7 +37,12 @@ class CategoryController extends \BaseController {
 	 */
 	public function store()
 	{
-		//
+		$category = new Category;
+		$category->type = Input::get('type');
+
+		$category->save();
+
+		return Redirect::to('category');
 	}
 
 
