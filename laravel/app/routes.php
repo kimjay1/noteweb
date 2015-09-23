@@ -11,7 +11,4 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('hello');
-});
+Routes::resource('category', 'CategoryController');
