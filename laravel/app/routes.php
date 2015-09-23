@@ -19,4 +19,6 @@ Route::get('/', function()
 
 Route::resource('notes' , 'NoteController');
 
-Routes::resource('category', 'CategoryController');
+
+
+

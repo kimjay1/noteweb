@@ -9,7 +9,7 @@ class NoteController extends \BaseController {
 	 */
 	public function index()
 	{
-		
+		echo 'SUCCESS';
 	}
 
 
@@ -20,7 +20,7 @@ class NoteController extends \BaseController {
 	 */
 	public function create()
 	{
-		//
+		return View::make('notes.add');
 	}
 
 
@@ -31,7 +31,13 @@ class NoteController extends \BaseController {
 	 */
 	public function store()
 	{
-		//
+		$notes = new Note;
+		$notes->name = Input::get('name');
+		$notes->text = Input::get('text');
+		$notes->save();
+
+		return Redirect::to('notes');
+
 	}
 
 
