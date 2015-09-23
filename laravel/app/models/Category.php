@@ -1,11 +1,10 @@
 <?php
 
-class Category extends Eloquent 
-{
+class Category extends Eloquent {
+
 	protected $fillable = array('type'); 
 
-	public function notes()
-	{
-		return $this->hasMany('Notes' , 'id');
+	public function notes(){
+		return $this->belongsToMany('Notes' , 'id');
 	}
 }

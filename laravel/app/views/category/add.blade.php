@@ -1,27 +1,24 @@
 @extends('template.template')
-
 @section('body')
 
+<div class="container">
 <div class="row">
+	<div class="col-md-9 col-md-offset-1">
+		<div class="well-md">
+			<h1>Categorize</h1>
 
+			{{ Form::open(array('route' => 'category.store')) }}  
 
+			<div class="form-group">
+				<input type="text" class="form-control" name="type" id="type" placeholder="Genre">
+			</div>
 
+				<button class = 'btn btn-primary pull-right'>Add</button>
 
-	<div class="col-xs-12 col-md-3 col-md-offset-4">
+			{{ Form::close() }} 
 
-
-		{{Form::open(array('route' => 'category.store'))}}
-
-	  	<div class="form-group">
-	   	 	<label>Category Name</label>
-	    	<input type="text" class="form-control" name="type" id="type">
-	 	 </div>
-	
-		<button class='btn btn-primary'>Add</button>
-
-		{{Form::close()}}
-
-
-</div>	
-
+		</div>
+	</div>
+</div>
+</div>
 @stop

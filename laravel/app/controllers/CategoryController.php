@@ -9,12 +9,8 @@ class CategoryController extends \BaseController {
 	 */
 	public function index()
 	{
-		
-		// $category = Category::all();
-
-		//return View::make('category.index')->with('category' , $category);
-
-		echo 'bati';
+	
+		echo 'SUCCESS';
 
 	}
 
@@ -37,10 +33,9 @@ class CategoryController extends \BaseController {
 	 */
 	public function store()
 	{
-		$category = new Category;
-		$category->type = Input::get('type');
-
-		$category->save();
+		$categorize = new Category;
+		$categorize->type = Input::get('type');
+		$categorize->save();
 
 		return Redirect::to('category');
 	}

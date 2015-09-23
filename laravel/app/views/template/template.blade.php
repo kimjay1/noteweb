@@ -6,9 +6,11 @@
 	@include('template.head')
 </head>
 <body>
-	@yield('body')
-
 	
+<div class="container">
+	@yield('body')
+	</div>
+
 </body>
 
 	@include('template.footer')
