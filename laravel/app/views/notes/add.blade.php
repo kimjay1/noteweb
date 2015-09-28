@@ -15,11 +15,12 @@
 			</div>
 
 			<div class="form-group">
-				<input type="text" rows="20" class="form-control" name="text" id="text" placeholder="Type here">
+				<textarea class="form-control" rows="20" name='text' id='text' placeholder='Type here'></textarea>
 			</div>
-			
-				<button class = 'btn btn-primary pull-right'>Publish</button>
 
+			<div class="form-group">
+				<button class = 'btn btn-primary pull-right'>Publish</button>
+			</div>
 			{{ Form::close() }} 
 
 		</div>

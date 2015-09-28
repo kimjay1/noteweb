@@ -17,7 +17,7 @@ class CreateNotesTable extends Migration {
 			$table->increments('id');
 			
 			$table->string('name');
-			$table->string('text');
+			$table->string('text' , 255);
 
 			$table->timestamps();
 		});

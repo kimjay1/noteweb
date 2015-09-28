@@ -9,7 +9,8 @@ class NoteController extends \BaseController {
 	 */
 	public function index()
 	{
-		echo 'SUCCESS';
+		$notes1 = Note::all();
+		return View::make('notes.index')->with('notes' , $notes1);
 	}
 
 
