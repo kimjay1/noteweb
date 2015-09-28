@@ -4,7 +4,7 @@
 @section('body')
 	
 <div class="table-responsive">
-	<button class='btn bt-active pull-right'></button>
+	
 	<table class='table'>
 		<tr>
 			<th>Category</th>
@@ -14,7 +14,7 @@
 	 	<tr>
 			<td>{{$category->type}}</td>	
 			
-			<td> <a href="http://localhost:8000/notes/create">add</a> </td>
+			<td> <button class = "btn btn-active"><a href="http://localhost:8000/notes/create">Add</a></button></td>
 
 		</tr>
 	@endforeach	
