@@ -8,14 +8,14 @@
 	<table class='table'>
 		<tr>
 			<th>Category</th>
+			<th>Read</th>
 			<th>Add note</th>
 		</tr> 
 	@foreach($category as $category)
 	 	<tr>
 			<td>{{$category->type}}</td>	
-			
+			<td> <a href="http://localhost:8000/notes">View</a> </td>
 			<td> <a href="http://localhost:8000/notes/create">add</a> </td>
-
 		</tr>
 	@endforeach	
 	</table>	
