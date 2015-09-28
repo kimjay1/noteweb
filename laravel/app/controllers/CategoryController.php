@@ -10,7 +10,9 @@ class CategoryController extends \BaseController {
 	public function index()
 	{
 	
-		echo 'SUCCESS';
+		$category = Category::all();
+
+		 return View::make('category.index')->with('category' , $category);
 
 	}
 
