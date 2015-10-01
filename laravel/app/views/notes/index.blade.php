@@ -16,7 +16,6 @@
 			@endforeach
 		</table>
 		<a href="http://localhost:8000/category">View Categories</a> </br>
-		<a href="http://localhost:8000/category/create">Add a category</a>
 	</div>
 </div>	
 </div>

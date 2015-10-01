@@ -52,7 +52,7 @@ class CategoryController extends \BaseController {
 	public function show($id)
 	{
 		$category1 = Category::find($id);
-
+		return View::make('category.show')->with('category' , $category1);
 	}
 
 
@@ -64,7 +64,8 @@ class CategoryController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		//
+		$categoryedit = Category::find($id);
+		return View::make('category.edit')->with('category' , $categoryedit);
 	}
 
 
@@ -76,7 +77,11 @@ class CategoryController extends \BaseController {
 	 */
 	public function update($id)
 	{
-		//
+		$category = Category::find($id);
+		$category->type = Input::get('type');
+		$category->save();
+
+		return Redirect::to('category');
 	}
 
 
