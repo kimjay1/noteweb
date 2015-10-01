@@ -87,7 +87,10 @@ class CategoryController extends \BaseController {
 	 */
 	public function destroy($id)
 	{
-		//
+		$category = Category::find($id);
+		$category->delete();
+
+		return Redirect::to('category');
 	}
 
 
