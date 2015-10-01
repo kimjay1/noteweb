@@ -63,7 +63,8 @@ class NoteController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		//
+		$noteedit = Note::find($id);
+		return View::make('notes.edit')->with('notes' , $noteedit);
 	}
 
 
@@ -75,7 +76,12 @@ class NoteController extends \BaseController {
 	 */
 	public function update($id)
 	{
-		//
+		$notes = Note::find($id);
+		$notes->name = Input::get('name');
+		$notes->text = Input::get('text');
+		$notes->save();
+
+		return Redirect::to('notes');
 	}
 
 
@@ -87,7 +93,11 @@ class NoteController extends \BaseController {
 	 */
 	public function destroy($id)
 	{
-		//
+		$note = Note::find($id);
+		$note->delete();
+
+		Session::flash('message', 'Successfully deleted the Note you have selected!');
+		return Redirect::to('notes');
 	}
 
 
