@@ -1,6 +1,10 @@
 @extends('template.template')
 
 @section('body')
+
 <div class="container">
-<h1>{{ $notes->text }}</h1>
+<div class="panel panel-default">
+  <div class="panel-body"><h3>{{ $notes->text }}</h3></div>
+</div>
+
 @stop
