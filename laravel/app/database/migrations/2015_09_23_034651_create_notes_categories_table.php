@@ -18,6 +18,7 @@ class CreateNotesCategoriesTable extends Migration {
 
 			$table->integer('note_id');
 			$table->integer('category_id');
+			$table->softDeletes();
 
 			$table->timestamps();
 		});
