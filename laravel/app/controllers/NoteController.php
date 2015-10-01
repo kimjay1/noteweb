@@ -50,7 +50,8 @@ class NoteController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		//
+		$notes2 = Note::find($id);
+		return View::make('notes.show')->with('notes' , $notes2);
 	}
 
 

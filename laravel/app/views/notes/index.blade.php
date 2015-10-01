@@ -8,12 +8,10 @@
 		<table class = "table table-hover table-bordered">
 			<tr>
 				<th>Title</th>
-				<th>Notes</th>
 			</tr>
 			@foreach($notes as $note)
 			<tr>
-				<td>{{ $note->name }}</td>
-				<td>{{ $note->text }}</td>
+				<td> <a href="notes/{{ $note->id }}">{{ $note->name }}</a></td>
 			</tr>
 			@endforeach
 		</table>

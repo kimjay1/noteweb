@@ -51,7 +51,8 @@ class CategoryController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		//
+		$category1 = Category::find($id);
+
 	}
 
 
